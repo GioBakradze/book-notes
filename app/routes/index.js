@@ -23,6 +23,12 @@ export default Ember.Route.extend({
                 notes: [
                     'Purchase other books from this series',
                     'Start reading professional books',
+                    'Start implementing pet projects',
+                    'Purchase other books from this series',
+                    'Start reading professional books',
+                    'Start implementing pet projects',
+                    'Purchase other books from this series',
+                    'Start reading professional books',
                     'Start implementing pet projects'
                 ]
             },
