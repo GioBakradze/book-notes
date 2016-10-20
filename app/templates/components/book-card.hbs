@@ -1,4 +1,4 @@
-<div class="panel panel-info book-card" onclick={{action 'zoomCard'}}>
+<div class="panel panel-info book-card {{if isZoomed 'book-card--zoomed'}}" onclick={{action 'zoomCard'}}>
     <div class="panel-heading">
         {{title}}
     </div>
