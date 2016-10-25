@@ -8,10 +8,13 @@ const Router = Ember.Router.extend({
 
 Router.map(function() {
 
-    this.authenticatedRoute('index', {path: '/'});
-
-    this.route('book', { path: 'book/:book_id' });
     this.route('login');
+
+    this.authenticatedRoute('user', function() {
+        this.route('books');
+        this.route('book', { path: 'book/:book_id' });
+    });
+
 });
 
 export default Router;

@@ -1,0 +1,7 @@
+<div class="row">
+    {{#each model as |book|}}
+        <div class="col-xs-12 col-sm-6 col-md-4">
+            {{book-card title=book.title notes=book.notes}}
+        </div>
+    {{/each}}
+</div>

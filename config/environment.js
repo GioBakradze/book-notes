@@ -27,7 +27,6 @@ module.exports = function(environment) {
     },
 
     firebase: {
-        // paste config here
     }
   };
 

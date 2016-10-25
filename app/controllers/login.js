@@ -17,7 +17,13 @@ export default Ember.Controller.extend({
                 email: this.get('email'),
                 password: this.get('password')
             }).then(() => {
-                this.transitionTo('index');
+
+                // TODO: maybe move this in outside lifecycle method?
+                this.set('password', '');
+                this.set('loginFailed', false);
+                this.set('email', '');
+
+                this.transitionToRoute('user.books');
             }, () => {
                 this.set('loginFailed', true);
             });

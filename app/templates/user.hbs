@@ -1,0 +1,11 @@
+<div class="container">
+    <h1>Welcome to BookNote</h1>
+    <h5>
+        Welcome <b>{{session.currentUser.email}}</b>
+        <button class="btn btn-xs btn-warning" onclick={{action 'signOut'}}>Sign Out</button>
+    </h5>
+
+    <br>
+
+    {{outlet}}
+</div>
