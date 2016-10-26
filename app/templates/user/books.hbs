@@ -1,7 +1,16 @@
+
+{{#link-to 'user.book' 'add' class="btn btn-sm btn-success"}}New Book{{/link-to}}
+
+<br><br>
+
 <div class="row">
     {{#each model as |book|}}
         <div class="col-xs-12 col-sm-6 col-md-4">
-            {{book-card title=book.title notes=book.notes}}
+
+            {{#link-to 'user.book' book.id class="book-card__link" }}
+                {{book-card title=book.title notes=book.notes}}
+            {{/link-to}}
+
         </div>
     {{/each}}
 </div>

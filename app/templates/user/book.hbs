@@ -1,10 +1,21 @@
-<div class="container">
-    <h1>Book Name here</h1>
-    <br>
+{{#link-to 'user.books' class="btn btn-sm btn-warning"}}Back{{/link-to}}
 
-    <div class="row">
-        <div class="col-xs-12">
-            book data here
-        </div>
+<br><br>
+
+<div class="panel panel-info">
+    <div class="panel-heading">
+        {{input placeholder="Title" value=model.title type="text" class="form-control"}}
+    </div>
+    <div class="panel-body">
+        <ul>
+            {{#each model.notes as |note|}}
+                <li>
+                    {{input placeholder="Title" value=note.title type="text" class="form-control"}}
+                    <br>
+                </li>
+            {{/each}}
+        </ul>
+        <button class="btn btn-small btn-success" onclick={{action 'addNote'}}>Add Note</button>
+        <button class="btn btn-small btn-info" onclick={{action 'saveBook'}}>Save</button>
     </div>
 </div>

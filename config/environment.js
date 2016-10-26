@@ -27,6 +27,11 @@ module.exports = function(environment) {
     },
 
     firebase: {
+        apiKey: "AIzaSyBiQO4DIHaoQAiUJDSVJpbojShL_n5u-wg",
+        authDomain: "book-note.firebaseapp.com",
+        databaseURL: "https://book-note.firebaseio.com",
+        storageBucket: "book-note.appspot.com",
+        messagingSenderId: "551741513032"
     }
   };
 
