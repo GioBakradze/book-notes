@@ -12,6 +12,13 @@ export default Ember.Route.extend({
         }
 
         return this.get('store').findRecord('book', params.book_id);
+    },
+
+    deactivate() {
+        this.currentModel.get('notes').map(note => note).forEach(note => {
+            note.rollbackAttributes();
+        });
+        this.currentModel.rollbackAttributes();
     }
 
 });
